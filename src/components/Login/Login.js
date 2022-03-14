@@ -17,12 +17,12 @@ const Login = (props) => {
       setFormIsValid(
         enteredEmail.includes('@') && enteredPassword.trim().length > 6
       );
-    }, [enteredEmail, enteredPassword]);
+    }, 500);
     return () => {
       console.log('new update');
       clearTimeout(identifire);
     };
-  }, 500);
+  }, [enteredEmail, enteredPassword]);
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
   };
