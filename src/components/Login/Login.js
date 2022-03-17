@@ -51,7 +51,15 @@ const Login = (props) => {
   return (
     <Card className={classes.login}>
       <form onSubmit={submitHandler}>
-        <Input id="email" label="E-Mail" type="email" isValid={emailIsValid} />
+        <Input
+          id="email"
+          label="E-Mail"
+          type="email"
+          isValid={emailIsValid}
+          value={emailState.value}
+          onChange={emailChangeHandler}
+          onBlur={validateEmailHandler}
+        />
         <div
           className={`${classes.control} ${
             passwordIsValid === false ? classes.invalid : ''
