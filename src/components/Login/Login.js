@@ -53,7 +53,7 @@ const Login = (props) => {
     }, 500);
     return () => {
       console.log('CLEANUP');
-      clearTimeout(identifire);
+      //clearTimeout(identifire);
     };
   }, [emailIsValid, passwordIsValid]);
   const emailChangeHandler = (event) => {
